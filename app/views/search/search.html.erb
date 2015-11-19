@@ -1,0 +1,11 @@
+<!DOCTYPE html> 
+
+<div align = "center">
+    <h1>Search for Adult Basic Education resources uploaded by forum users</h1>
+    <body>
+        <%= form_tag do %>
+            <%= text_field_tag 'query' %>
+            <%= button_to "Search", :action => "results" %>
+        <% end %>
+    </body>
+</div>

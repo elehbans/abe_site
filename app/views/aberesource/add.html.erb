@@ -1,0 +1,19 @@
+<!DOCTYPE html> 
+
+<div align = "center">
+    <h1>Add a resource to the database</h1>
+    <body>
+        <%= form_for @to_add, url: {action: "add"} do |f| %>
+            <p><%= f.label :user_id, "User Id" %>
+            <%= f.text_field :user_id %></p>
+            
+            <p><%= f.label :filename %>
+            <%= f.text_field :filename %></p>
+            
+            <p><%= f.label :description %>
+            <%= f.text_field :description %></p>
+            
+            <%= f.submit "Submit" %>
+        <% end %>
+    </body>
+</div>
