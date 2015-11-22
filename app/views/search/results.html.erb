@@ -1,3 +1,25 @@
 <!DOCTYPE html> 
 
-<%= @query %>
+<div align = "center">
+    <h1>Resources that match your description query</h1>
+    <body>
+        <table>                         
+          <tr>                          
+            <th>Created At</th>
+            <th>Filename</th>
+            <th>Description</th>
+          </tr>
+        <% @results.each do |p| %>       
+          <tr>
+            <td><%= p['created_at'] %></td>  
+            <td><%= p['filename'] %></td>  
+            <td><%= p['description'] %></td>  
+          </tr>
+        <% end %>                        
+        </table>   
+    </body>
+    <p></p>
+    <%= link_to "Add a resource", add_path %>
+    <p></p>
+    <%= link_to "Find a resource", root_path %>
+</div>

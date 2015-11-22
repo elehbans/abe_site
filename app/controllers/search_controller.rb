@@ -5,5 +5,6 @@ class SearchController < ApplicationController
     
     def results
         @query = params[:query]
+        @results = Aberesource.where("description = ?", @query)
     end
 end

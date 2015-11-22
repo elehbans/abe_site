@@ -1,9 +1,25 @@
 <!DOCTYPE html> 
 
 <div align = "center">
-    <h1>Resources you just added to the database</h1>
+    <h1>Resources you have added to the database</h1>
     <body>
-        <p><b>Filename: </b><%= @just_added['filename'] %></p>
-        <p><b>Description: </b><%= @just_added['description'] %></p>
+        <table>                         
+          <tr>                          
+            <th>Created At</th>
+            <th>Filename</th>
+            <th>Description</th>
+          </tr>
+        <% @added_by_user.each do |p| %>       
+          <tr>
+            <td><%= p['created_at'] %></td>  
+            <td><%= p['filename'] %></td>  
+            <td><%= p['description'] %></td>  
+          </tr>
+        <% end %>                        
+        </table>   
     </body>
+    <p></p>
+    <%= link_to "Add a resource", add_path %>
+    <p></p>
+    <%= link_to "Find a resource", root_path %>
 </div>
