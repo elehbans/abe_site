@@ -3,10 +3,7 @@
 <div align = "center">
     <h1>Resources you just added to the database</h1>
     <body>
-        <% @just_added.each do |p| %>
-            <%= p.user_id.to_s %>
-            <%= p.filename.to_s %>
-            <%= p.description.to_s %>
-        <% end %>
+        <p><b>Filename: </b><%= @just_added['filename'] %></p>
+        <p><b>Description: </b><%= @just_added['description'] %></p>
     </body>
 </div>
